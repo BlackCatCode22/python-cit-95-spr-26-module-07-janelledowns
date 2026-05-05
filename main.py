@@ -151,3 +151,9 @@ for tiger in list_of_tigers:
         print(tiger.animal_id + ", " + tiger.name + "; birthdate: " + str(tiger.birth_date) + "; " + tiger.color +
               "; " + tiger.gender + "; " + tiger.weight + "; " + tiger.originating_zoo + "; arrived: " +
               str(tiger.date_arrival))
+
+with open("zooPopulation.txt", "w") as f:
+    f.write("Zookeeper's Challenge Zoo Population\n\n")
+    f.write("Hyena Habitat:\n\n")
+    for hyena in list_of_hyenas:
+        f.write(f"{hyena.animal_id}, {hyena.name}; birthdate: {hyena.birth_date}; {hyena.color}; {hyena.gender}; {hyena.weight}; {hyena.originating_zoo}; arrived: {hyena.date_arrival}\n\n")
